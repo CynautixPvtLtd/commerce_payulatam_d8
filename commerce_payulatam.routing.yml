@@ -1,0 +1,29 @@
+commerce_payulatam.response:
+  path: '/COMMERCE_PAYULATAM_URL_RESPONSE/{page}/{order}/{token}/{option}'
+  defaults:
+    _title: 'Transaction summary'
+    _controller: '\Drupal\commerce_payulatam\Controller\DefaultController::commerce_payulatam_response'
+  requirements:
+    _custom_access: '\Drupal\commerce_payulatam\Controller\DefaultController::commerce_payulatam_access_page'
+commerce_payulatam.confirmation:
+  path: '/COMMERCE_PAYULATAM_URL_CONFIRMATION/{page}/{order}/{token}/{option}'
+  defaults:
+    _controller: '\Drupal\commerce_payulatam\Controller\DefaultController::commerce_payulatam_confirmation'
+  requirements:
+    _custom_access: '\Drupal\commerce_payulatam\Controller\DefaultController::commerce_payulatam_access_page'
+commerce_payulatam.page_view:
+  path: '/admin/commerce_payulatam/{entity}/view'
+  defaults:
+    _title: 'View Transaction'
+    _controller: '\Drupal\commerce_payulatam\Controller\DefaultController::commerce_payulatam_page_view'
+  requirements:
+    _permission: 'commerce payulatam view transaction'
+commerce_payulatam.admin_settings_form:
+  path: '/admin/config/commerce_payulatam/settings'
+  defaults:
+    _form: '\Drupal\commerce_payulatam\Form\CommercePayulatamSettingsForm'
+    _title: 'CommercePayulatamSettingsForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

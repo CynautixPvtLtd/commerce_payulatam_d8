@@ -1,0 +1,10 @@
+name: 'Payment PayuLatam'
+description: 'Implements PayuLatam''s payment gateway for Drupal Commerce.'
+core: 8.x
+package: Commerce
+dependencies:
+  commerce: 'commerce:commerce'
+  #commerce_ui: 'commerce_ui:commerce_ui'
+  commerce_payment: 'commerce_payment:commerce_payment'
+  commerce_order: 'commerce_order:commerce_order'
+type: module
